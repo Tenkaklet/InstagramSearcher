@@ -1,5 +1,5 @@
 angular.module('InstagramApp', [])
-.controller('InstaController', ['$scope','$http', function ($scope, $http) {
+.controller('InstaController', ['$scope','$http', '$q', function ($scope, $http, $q) {
     $scope.pictures = [];
     $scope.InstagramSearch = function () {
         var tag = $scope.tagKeyword;
