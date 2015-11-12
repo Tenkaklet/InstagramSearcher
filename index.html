@@ -18,7 +18,7 @@
       <header>
           <img src="images/InstaLogo.png" alt="" class="center-block">
           <section class="container" id="theFinder">
-            <form class="form-inline" name="instaForm" ng-submit="InstagramSearch()">
+            <form class="form-inline" name="InstaForm" ng-submit="InstagramSearch()">
                 <input type="text" class="form-control" ng-model="tagKeyword" placeholder="Enter a tag to search...">
                 <input type="submit" class="btn btn-primary">
             </form>
@@ -26,16 +26,11 @@
       </header>
       <section id="results">
           <div class="container">
-              <ul>
-                  <li><img src="http://placehold.it/200x200" alt=""></li>
-                  <li><img src="http://placehold.it/200x200" alt=""></li>
-                  <li><img src="http://placehold.it/200x200" alt=""></li>
-                  <li><img src="http://placehold.it/200x200" alt=""></li>
-                  <li><img src="http://placehold.it/200x200" alt=""></li>
-                  <li><img src="http://placehold.it/200x200" alt=""></li>
-                  <li><img src="http://placehold.it/200x200" alt=""></li>
-                  <li><img src="http://placehold.it/200x200" alt=""></li>
-                  <li><img src="http://placehold.it/200x200" alt=""></li>
+              <div class="hello" ng-if="pictures">
+                  <p class="lead">Seems like we found {{pictures.length}} for {{tagKeyword}}</p>
+              </div>
+              <ul ng-repeat="picture in pictures">
+                  <li><img class="thumbnail small-img" ng-src="{{picture.images.low_resolution.url}}" alt=""></li>
               </ul>
           </div>
       </section>

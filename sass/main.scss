@@ -4,20 +4,16 @@ body {
 
 header {
     text-align: center;
-    .form-inline {
-        .form-control {
-            width: 37%;
-        }
-    }
+
 }
 
 #results {
-    margin: 20px auto;
+    margin: 20px 0;
     ul {
         list-style: none;
+        display: inline-block;
         li {
-            display: inline-block;
-            padding: 5px;
+            
         }
     }
 }

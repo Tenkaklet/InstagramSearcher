@@ -3,13 +3,9 @@ body {
 
 header {
   text-align: center; }
-  header .form-inline .form-control {
-    width: 37%; }
 
 #results {
-  margin: 20px auto; }
+  margin: 20px 0; }
   #results ul {
-    list-style: none; }
-    #results ul li {
-      display: inline-block;
-      padding: 5px; }
+    list-style: none;
+    display: inline-block; }
