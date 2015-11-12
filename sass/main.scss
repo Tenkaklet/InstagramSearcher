@@ -4,4 +4,20 @@ body {
 
 header {
     text-align: center;
+    .form-inline {
+        .form-control {
+            width: 37%;
+        }
+    }
+}
+
+#results {
+    margin: 20px auto;
+    ul {
+        list-style: none;
+        li {
+            display: inline-block;
+            padding: 5px;
+        }
+    }
 }
