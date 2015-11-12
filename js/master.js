@@ -5,9 +5,9 @@ angular.module('InstagramApp', [])
 
     $scope.pictures = [];
     $scope.InstagramSearch = function () {
-            $timeout(function() {
+            $timeout(function () {
                 money();
-            }, 1000);
+            }, 2000);
             $scope.query = true;
             var tag = $scope.tagKeyword;
             var baseURL = 'https://api.instagram.com/v1/tags/' + tag + '/media/recent?';
@@ -16,22 +16,23 @@ angular.module('InstagramApp', [])
                 client_id: '0115b5f0a43746a48c75c62e2fb78e72',
                 callback: 'JSON_CALLBACK',
             };
-            function money () {
+            function showRes () {
                 $scope.showResults = true;
+            }
+
+            function money () {
             $http.jsonp(baseURL, {params: params})
-
-
                 .then(function(response) {
                     $scope.pictures = response.data.data;
                     console.log($scope.pictures);
-                    $scope.InstaForm.$setPristine();
+                    showRes();
+
                     $scope.query = false;
                 }, function (response) {
                     console.log('You failed!');
                 });
             }
             resetKeyword();
-
     };
 
     function resetKeyword () {
