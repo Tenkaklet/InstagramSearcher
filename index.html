@@ -21,6 +21,9 @@
             <form class="form-inline" name="InstaForm" ng-submit="InstagramSearch()">
                 <input type="text" class="form-control" ng-model="tagKeyword" placeholder="Enter a tag to search...">
                 <input type="submit" class="btn btn-primary">
+                <div class="text-center" ng-if="query">
+                    <p>We are looking for your pictures now...</p>
+                </div>
             </form>
           </section>
       </header>
