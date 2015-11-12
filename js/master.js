@@ -2,18 +2,10 @@ angular.module('InstagramApp', [])
 .controller('InstaController', ['$scope','$http', '$q', '$timeout', function ($scope, $http, $q, $timeout) {
 
 
-    function wait() {
-    return $q(function(resolve, reject){
-      $timeout(function() {
-          resolve();
-  }, 80000000);
-    });
-}
 
     $scope.pictures = [];
     $scope.InstagramSearch = function () {
         $scope.query = true;
-        wait();
         var tag = $scope.tagKeyword;
         var baseURL = 'https://api.instagram.com/v1/tags/' + tag + '/media/recent?';
 
