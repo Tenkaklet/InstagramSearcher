@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="InstagramApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,12 +14,12 @@
       <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body ng-controller="InstaController">
       <header>
           <img src="images/InstaLogo.png" alt="" class="center-block">
           <section class="container" id="theFinder">
-            <form class="form-inline" name="instaForm">
-                <input type="text" class="form-control" placeholder="Enter a tag to search...">
+            <form class="form-inline" name="instaForm" ng-submit="InstagramSearch()">
+                <input type="text" class="form-control" ng-model="tagKeyword" placeholder="Enter a tag to search...">
                 <input type="submit" class="btn btn-primary">
             </form>
           </section>
@@ -36,7 +36,6 @@
                   <li><img src="http://placehold.it/200x200" alt=""></li>
                   <li><img src="http://placehold.it/200x200" alt=""></li>
                   <li><img src="http://placehold.it/200x200" alt=""></li>
-
               </ul>
           </div>
       </section>
