@@ -1,1 +1,1 @@
-//angular app
+console.log('hello');
