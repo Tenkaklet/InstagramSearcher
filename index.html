@@ -7,7 +7,7 @@
     <title>Instagram Searcher</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.min.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <!--[if lt IE 9]>
       <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -15,8 +15,18 @@
     <![endif]-->
   </head>
   <body>
+      <header>
+          <img src="images/InstaLogo.png" alt="" class="center-block">
+          <section class="container" id="theFinder">
+            <form class="form-inline" name="instaForm">
+                <input type="text" class="form-control">
+                <input type="submit" class="btn btn-sm btn-primary">
+            </form>
+          </section>
+      </header>
+      <section id="results">
 
-
+      </section>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.min.js" charset="utf-8"></script>
       <script src="master.js" charset="utf-8"></script>
   </body>
