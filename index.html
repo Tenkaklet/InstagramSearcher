@@ -32,12 +32,13 @@
               <div class="text-center" ng-if="showResults">
                   <p class="lead">Seems like we found {{pictures.length}} for {{tagKeyword}}</p>
               </div>
-              <ul ng-repeat="picture in pictures">
+              <ul ng-repeat="picture in pictures" id="showing">
                   <li><a ng-href="{{picture.link}}"><img class="thumbnail small-img" ng-src="{{picture.images.low_resolution.url}}" alt=""></a></li>
               </ul>
           </div>
       </section>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.min.js" charset="utf-8"></script>
+      <script src="https://code.angularjs.org/1.4.7/angular-animate.min.js"></script>
       <script src="js/master.js" charset="utf-8"></script>
   </body>
 </html>

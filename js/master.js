@@ -1,4 +1,4 @@
-angular.module('InstagramApp', [])
+angular.module('InstagramApp', ['ngAnimate'])
 .controller('InstaController', ['$scope','$http', '$q', '$timeout', function ($scope, $http, $q, $timeout) {
 
     $scope.showResults = false;
