@@ -1,8 +1,9 @@
 angular.module('InstagramApp', ['ngAnimate'])
 .controller('InstaController', ['$scope','$http', '$q', '$timeout', function ($scope, $http, $q, $timeout) {
 
+    $scope.tempVariable = '';
     $scope.showResults = false;
-
+    $scope.tagKeyword = '';
     $scope.pictures = [];
     $scope.InstagramSearch = function () {
             $timeout(function () {
@@ -10,6 +11,7 @@ angular.module('InstagramApp', ['ngAnimate'])
             }, 2000);
             $scope.query = true;
             var tag = $scope.tagKeyword;
+            $scope.tempVariable = tag;
             var baseURL = 'https://api.instagram.com/v1/tags/' + tag + '/media/recent?';
 
             var params = {
@@ -32,10 +34,6 @@ angular.module('InstagramApp', ['ngAnimate'])
                     console.log('You failed!');
                 });
             }
-            resetKeyword();
+            $scope.tagKeyword = '';
     };
-
-    function resetKeyword () {
-        $scope.tagKeyword = $scope.tagKeyword;
-    }
 }]);
